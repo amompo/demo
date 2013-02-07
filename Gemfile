@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
+
 gem 'rails',     github: 'rails/rails'
 gem 'arel',      github: 'rails/arel'
 
@@ -26,6 +28,8 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'
+
+gem 'thin'
 
 group :development do
 	gem 'pry'
