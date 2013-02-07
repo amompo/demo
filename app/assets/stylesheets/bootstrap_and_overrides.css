@@ -170,8 +170,8 @@ textarea {
   img {
     page-break-inside: avoid;
   }
-  img {
-    max-width: none;
+  body img {
+    max-width: none !important;
   }
   @page  {
     margin: 0.5cm;
@@ -695,6 +695,11 @@ a.text-info:hover {
 
 a.text-success:hover {
   color: #356635;
+}
+
+h3 {
+  font-size: 16px;  
+  line-height: 20px;
 }
 
 h1 small,
