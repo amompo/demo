@@ -1,0 +1,17 @@
+<header id="cover-slider">
+	<h1 id="company-title"><span id="company-name">Danrent</span><span class="dot">.</span><span id="company-domain">dk</span></h1>
+	<div id="photo-gallery">
+		<%= image_tag 'property/loft.jpg' %>
+	</div>
+	<div id="options-bar">
+		<div id="quick-search" class="search_form" action="input">
+			<input id="search-bar" type="text" value="Where are you moving to?" name="myfield" onclick="clickclear(this,'default text')" onblur="clickrecall(this,'default text')"></input>
+			<%= link_to properties_path do %>
+				<button class="btn btn-primary"><i class="icon-white icon-search"></i> Search</button>
+			<% end %>
+		</div>
+		<div id="rent-home-button">
+			<button class="btn btn-primary btn-large">Rent your home</button>
+		</div>
+	</div>
+</header>

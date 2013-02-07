@@ -1,0 +1,10 @@
+<div id="registered-user" class="section">
+	<span>
+		<%= link_to session_path(0), :method => :delete do %>
+		<div id="log_out">
+			<i class="icon-unlock"></i>
+			<span><%= session[:user].display if session[:user] %></span>
+		</div>
+		<% end %>
+	</span>
+</div>

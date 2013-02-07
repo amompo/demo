@@ -1,0 +1,14 @@
+<a href="html/pages/properties/show.html">
+	<div class="box small rounded normal_area list_item property rentability good selectable">
+		<div class="upper">
+			<%= image_tag "property/#{property.name}.jpg", width: 240, height: 180 %>
+		</div>
+
+		<div class="lower">
+			<div>
+				<h4 class="cost"><%= property.cost %> DKK</h4>
+				<h4 class="location"><%= property.city %></h4>				
+			</div>
+		</div>
+	</div>
+</a>
