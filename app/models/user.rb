@@ -1,7 +1,7 @@
 class User
 	include ::ActiveModel::Model
 
-	attr_accessor :name, :logged_in
+	attr_accessor :name, :logged_in, :email, :password
 
 	def self.logged_in!
 		self.new logged_in: true

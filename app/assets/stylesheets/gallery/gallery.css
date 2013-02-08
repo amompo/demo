@@ -1,4 +1,4 @@
-#photo-gallery.photo_box {
+.photo_box {
 	margin: 0px;
 	padding: 0px;
 
@@ -11,7 +11,7 @@
 /*	border: 1px solid;
 */}
 
-#photo-gallery.photo_box img {
+.photo_box img {
 	margin: 5px;
 	min-height: 573px;
 	max-height: 573px;

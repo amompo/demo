@@ -1,0 +1,14 @@
+<%= link_to property_path(0, mode: 'gallery') do %>
+	<div id="gallery-display-switch" class="box rounded link_box selectable">
+		<div class="upper">
+			<h3>Photo gallery</h3>
+		</div>
+
+		<div class="middle">
+			<%= image_tag 'property/loft.jpg', width: 240, height: 240 %>
+		</div>
+		<div class="lower">
+			<h4><span class="icon-plus-sign"></span> Enlarge photos</h4>				
+		</div>
+	</div>
+<% end %>

@@ -1,18 +1,22 @@
 class Property
 	include ::ActiveModel::Model
 
-	attr_accessor :name, :cost, :city, :id
+	attr_accessor :name, :cost, :currency, :city, :title, :id
 
 	def id
 		1
 	end
 
+	def self.create_random
+		Property.new name: random_name, title: 'Beatiful apartment in the...', cost: random_cost, currency: random_currency, city: 'Copenhagen'
+	end
+
 	def self.featured_ads count = 6
-		count.times.map { Property.new name: random_name, cost: random_cost, city: 'Copenhagen '}
+		count.times.map { Property.create_random }
 	end
 
 	def self.all count = 10
-		rand(count+1).times.map { Property.new name: random_name, cost: random_cost, city: 'Copenhagen '}
+		(rand(count)+10).times.map { Property.create_random }
 	end
 
 	def mail
@@ -36,6 +40,10 @@ class Property
 	end
 
 	protected
+
+	def self.random_currency
+		['DKK', 'SEK', 'NOK'].sample
+	end
 
 	def self.random_name
 		['nyhavn', 'tivoli'].sample

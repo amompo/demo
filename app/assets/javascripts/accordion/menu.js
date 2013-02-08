@@ -22,7 +22,8 @@ $(function() {
 				active_count += 1;
 				total += (section_heights[name] + 10);	
 			}		
-			total += ((active_count-1) * 6)
+			total += ((active_count-1) * 6);
+			console.log('total sections height:', total);
 		}	
 		accordion_menu.css('min-height', total);		
 	}
@@ -55,6 +56,7 @@ $(function() {
 		// blank circle from menu to indicate inactive
 		indicator.removeClass('icon-circle');
 		indicator.addClass('icon-circle-blank');
+		setAccordionMenuHeight();
 	});
 
 	accordion_menu_items.click(function() {
@@ -87,6 +89,8 @@ $(function() {
 
 			accordion_section.removeClass('active');
 			accordion_section.addClass('inactive');	
-		}				
+		}		
+
+		setAccordionMenuHeight();
 	});
 });
