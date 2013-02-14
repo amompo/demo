@@ -1,12 +1,28 @@
 <div id="navigation-buttons" class="section">
 	<div class="items">
+		<!-- Properties  -->
 		<span id="nav-search">
 			<i class="icon-search"></i>
 			<span class="badge badge-warning">4</span>
 		</span>
-		<span id="nav-favorites">
-			<i class="icon-heart"></i>
-			<span class="badge badge-warning">6</span>
-		</span>
+
+		<%= if logged_in? %>
+			<!-- Favorites -->
+			<%= link_to favorites_path %>
+				<span id="nav-favorites">
+					<i class="icon-heart"></i>
+					<span class="badge badge-warning">6</span>
+				</span>
+			<% end %>
+
+			<!-- Conversations -->
+			<%= link_to conversations_path %>			
+				<span id="nav-mail">
+					<i class="icon-mail"></i>
+					<span class="badge badge-warning">3</span>
+				</span>
+			<% end %>
+		<% end %>
+
 	</div>				
 </div>

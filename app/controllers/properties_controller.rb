@@ -1,4 +1,11 @@
 class PropertiesController < ApplicationController
+	def new
+		session[:user] = User.landlord!
+		@name = params[:id]
+		@mode = params[:mode] || 'gallery'
+		render layout: 'single_item'		
+	end
+
 	def show
 		@name = params[:id]
 		@mode = params[:mode] || 'gallery'
@@ -16,6 +23,7 @@ class PropertiesController < ApplicationController
 		puts "properties: #{@properties}"
 		render layout: 'list'
 	end
+<<<<<<< HEAD
 
 	# fancybox ajax
 	def edit_details
@@ -25,4 +33,6 @@ class PropertiesController < ApplicationController
 
 	def new
 	end
+=======
+>>>>>>> 621e5e93d281fed99c0dea6774d53f535001d9f0
 end

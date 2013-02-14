@@ -97,7 +97,7 @@ GIT
       railties (>= 3.1)
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     activerecord-deprecated_finders (0.0.3)
     atomic (1.0.1)
