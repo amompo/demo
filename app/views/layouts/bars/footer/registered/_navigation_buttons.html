@@ -1,0 +1,22 @@
+<div id="registered-navigation-buttons" class="section">
+	<div class="items">
+		<%= link_to properties_path do %>		
+			<span id="nav-search" class="nav_item">
+				<i class="icon-search"></i>
+				<span class="badge badge-warning counter">4</span>
+			</span>
+		<% end %>
+		<%= link_to favorites_path do %>
+			<span id="nav-favorites" class="nav_item">
+				<i class="icon-heart"></i>
+				<span class="badge badge-warning counter favorites_counter">6</span>
+			</span>
+		<% end %>
+		<%= link_to conversations_nav_path do %>			
+			<span id="nav-conversations" class="nav_item">
+				<i class="icon-mail"></i>
+				<span class="badge badge-warning counter conversations_counter">8</span>
+			</span>
+		<% end %>			
+	</div>				
+</div>

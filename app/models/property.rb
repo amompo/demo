@@ -19,6 +19,10 @@ class Property
 		10.times.map { Property.create_random }
 	end
 
+	def self.owned_by user
+		(rand(2) +1).times.map { Property.create_random }
+	end
+
 	def self.all count = 10
 		(rand(count)+10).times.map { Property.create_random }
 	end

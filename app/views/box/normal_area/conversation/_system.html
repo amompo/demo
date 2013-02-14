@@ -1,13 +1,15 @@
-<div class="box rounded normal_area list_item system mail unread selectable">
-	<div class="upper">
-		<img class="indicator mail" src="../../../images/unread_mail.png" width="34" height="34" />
-		<img src="../../../images/swan_blured.png" width="240" height="180" />
-	</div>
+<%= link_to send "#{user_type}_system_dialog_path", 0 do %>
+	<div class="box rounded normal_area list_item system mail unread selectable">
+		<div class="upper">
+			<%= image_tag "icons/mail/replied_mail.png", width: 34, height: 34, class: 'indicator mail' %>
+			<%= image_tag "company_logo/logo_normal.png", width: 240, height: 180 %>
+		</div>
 
-	<div class="middle">				
-		<h3>Danrent</h3>
-	</div>
+		<div class="middle">				
+			<h3>Danrent</h3>
+		</div>
 
-	<div class="lower">
+		<div class="lower">
+		</div>
 	</div>
-</div>
+<% end %>

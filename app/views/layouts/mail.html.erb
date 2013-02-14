@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= render partial: 'layouts/application/head' %>
+  </head>
+  <body>
+
+    <%= render partial: 'layouts/bars/header' %>
+
+		<div id="content" class="mail">
+      <%= yield %>
+    </div>
+
+    <%= render 'layouts/bars/footer' %>
+
+
+    <!-- Javascripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag "application" %>
+
+  </body>
+</html>
+

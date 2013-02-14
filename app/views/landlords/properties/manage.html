@@ -1,0 +1,7 @@
+<%= @max_properties.times do |num| %>
+	<% if @properties[num] %>
+		<%= render partial: 'box/normal_area/property/manage/edit', locals: {property: @properties[num] } %>
+	<% else %>
+		<%= render partial: 'box/normal_area/property/manage/new' %>
+	<% end %>			
+<% end %>	

@@ -1,21 +1,8 @@
-	<script type="text/javascript">
-	$(function() {
-		// Clear textarea default text when it gets focus (fx by click or tab)
-		$('textarea#message').focus(function() {
-			var item = $(this);
-			var text = item.text();
-			if (text == 'Write your description here...') {
-				item.text('');
-			}
-		});
-	});
-	</script>
-
 <div id="content" class="single_item">
 	<div id="upper-content">
 		<div id="profile" class="box square_photo selectable">
 			<div class="upper">
-				<img src="../../../../../images/alex-photo.png" width="240" height="240" />
+				<%= image_tag "user_photos/alex-photo.png", width: 240, height: 180 %>
 			</div>
 			<div class="middle">
 				<h3>Hi, I'm Alex</h3>
@@ -38,7 +25,7 @@
 			<div class="middle">				
 				<h3>Contact info:</h3>
 				<div class="phone_number">
-					<img src="../../../../../images/phone.png" width="32" height="32">
+					<%= image_tag  "icons/contact/phone.png", width: 32, height: 32 %>
 					<h4>+45 69696969</h4>
 				</div>
 			</div>
@@ -49,7 +36,7 @@
 
 		<div class="box rounded normal_area list_item property selectable">
 			<div class="upper">
-				<img src="../../../../../images/photo4.png" width="240" height="180" />
+				<%= image_tag "property/photo4.png", width: 240, height: 180 %>
 			</div>
 			
 			<div class="middle">				
@@ -75,44 +62,10 @@
 	</div>
 	<div id="lower-content">
 		<ul id='tenant-message-list' class="thread">
-			<li class="tenant_message message">
-				<div class="message_date">
-					<h5>13:45 - 3/2/2013</h5>
-				</div>
-				<div class="message_content">
-					<div class="message_text">
-						<p>Ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-					<div class="message_profile">
-						<div class="sender_photo">
-							<img src="../../../../../images/amanda.png">
-						</div>
-						<div class="sender_name">
-							<h6>You wrote</h6>
-						</div>
-					</div>
-				</div>
-			</li>
+			<%= render partial: 'tenants/messages/show' %>
 		</ul>
 		<ul id='landlord-message-list' class="thread landlord">
-			<li class="landlord_message message">
-				<div class="message_date">
-					<h5>13:45 - 3/2/2013</h5>
-				</div>
-				<div class="message_content">
-					<div class="message_text inverse">
-						<p>Ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-					<div class="message_profile">
-						<div class="sender_photo">
-							<img src="../../../../../images/alex-photo.png">
-						</div>
-						<div class="sender_name">
-							<h6>Alex wrote</h6>
-						</div>
-					</div>
-				</div>
-			</li>
+			<%= render partial: 'landlords/messages/show' %>
 		</ul>
 		<ul id='tenant-message-list' class="thread">
 			<li class="tenant_message message">
@@ -125,7 +78,7 @@
 					</div>
 					<div class="message_profile">
 						<div class="sender_photo">
-							<img src="../../../../../images/amanda.png">
+							<%= image_tag "user_photos/amanda.png", width: 240, height: 180 %>
 						</div>
 						<div class="sender_name">
 							<h6>New</h6>

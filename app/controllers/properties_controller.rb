@@ -2,13 +2,14 @@ class PropertiesController < ApplicationController
 	def new
 		session[:user] = User.landlord!
 		@name = params[:id]
-		@mode = params[:mode] || 'gallery'
+		@mode = params[:mode] || 'edit_map'
 		render layout: 'single_item'		
 	end
 
 	def show
 		@name = params[:id]
 		@mode = params[:mode] || 'gallery'
+		@page = Page.new name: :property
 		render layout: 'single_item'
 	end
 
@@ -20,19 +21,14 @@ class PropertiesController < ApplicationController
 
 	def index
 		@properties = Property.all
+		@page = Page.list! :property_search
 		puts "properties: #{@properties}"
 		render layout: 'list'
 	end
-<<<<<<< HEAD
 
 	# fancybox ajax
 	def edit_details
 		@name = params[:id]
 		render layout: 'fancybox'
 	end
-
-	def new
-	end
-=======
->>>>>>> 621e5e93d281fed99c0dea6774d53f535001d9f0
 end

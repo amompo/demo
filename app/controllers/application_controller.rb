@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
   protected
 
   def set_session
-  	session[:user] = User.new unless session[:user]
+  	session[:user] ||= User.guest!
+  end
+
+  def current_user
+  	session[:user]
   end
 end
