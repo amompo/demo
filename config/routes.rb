@@ -5,7 +5,35 @@ Danrent::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: 'main#cover'
 
-  resources :properties, only: [:show, :index, :edit, :new]
+  resources :properties, only: [:show, :index, :edit, :new] do
+    member do
+      get 'edit/details', to: 'properties#edit_details'
+    end
+
+    collection do
+      get 'favorites', to: 'sessions#favorites'
+      get 'manage', to: 'sessions#manage'
+    end
+  end
+
+  resources :tenants, only: [] do
+    resources :conversations, only: [:index]
+
+    resources :dialogs, only: [:show]    
+  end
+
+  # resources :users do
+  # end
+
+  scope :user do
+    get 'favorites', to: 'sessions#favorites'
+  end
+
+  scope :tenant do
+    get 'conversations', to: 'tenantssws/conversations#index'
+    get 'dialogs', to: 'dialogs#index'
+  end
+
 
   resources :sessions, only: [:new, :destroy]  
 

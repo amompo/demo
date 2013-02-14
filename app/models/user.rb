@@ -7,6 +7,10 @@ class User
 		self.new logged_in: true
 	end
 
+	def favorites
+		Property.favorites self
+	end
+
 	def name
 		'Alex'
 	end

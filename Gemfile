@@ -8,9 +8,9 @@ gem 'arel',      github: 'rails/arel'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sprockets-rails', github: 'rails/sprockets-rails'
-  gem 'sass-rails',   github: 'rails/sass-rails'
-  gem 'coffee-rails', github: 'rails/coffee-rails'
+  gem 'sprockets-rails',        github: 'rails/sprockets-rails'
+  gem 'sass-rails',             github: 'rails/sass-rails'
+  gem 'coffee-rails',           github: 'rails/coffee-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', platforms: :ruby
@@ -18,8 +18,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'twitter-bootstrap-rails', 	git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-gem 'font-awesome-rails', 		git: 'git://github.com/bokmann/font-awesome-rails.git'
+gem 'twitter-bootstrap-rails', 	github: 'seyhunak/twitter-bootstrap-rails'
+gem 'font-awesome-rails', 		  github: 'bokmann/font-awesome-rails'
 
 gem 'jquery-rails'
 
@@ -30,6 +30,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 
 gem 'thin'
+
+gem 'fancybox2-rails',           github: 'kyparn/fancybox2-rails'
 
 group :development do
 	gem 'pry'

@@ -6,6 +6,13 @@ GIT
       railties (>= 3.1)
 
 GIT
+  remote: git://github.com/kyparn/fancybox2-rails.git
+  revision: 2ed4a6072761a2cd36bb5fe51c675953ee093d1e
+  specs:
+    fancybox2-rails (0.2.3)
+      railties (>= 3.1.0)
+
+GIT
   remote: git://github.com/rails/arel.git
   revision: 80f11e342d00a2177dd8e5684914855b87771c5b
   specs:
@@ -174,6 +181,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails!
+  fancybox2-rails!
   font-awesome-rails!
   jbuilder (~> 1.0.1)
   jquery-rails

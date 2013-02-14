@@ -7,7 +7,7 @@ class PropertiesController < ApplicationController
 
 	def edit
 		@name = params[:id]
-		@mode = params[:mode] || 'gallery'
+		@mode = params[:mode] || 'edit_map'
 		render layout: 'single_item'
 	end
 
@@ -15,6 +15,12 @@ class PropertiesController < ApplicationController
 		@properties = Property.all
 		puts "properties: #{@properties}"
 		render layout: 'list'
+	end
+
+	# fancybox ajax
+	def edit_details
+		@name = params[:id]
+		render layout: 'fancybox'
 	end
 
 	def new

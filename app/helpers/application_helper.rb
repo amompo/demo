@@ -5,6 +5,17 @@ module ApplicationHelper
 	end
 
 	def reverse_mode mode = :gallery
-		mode.to_sym == :gallery ? 'map' : 'gallery'
+		case mode.to_sym
+		when :gallery
+			'map'
+		when :map
+			'gallery'
+		when :edit_map
+			'edit_details'
+		when :edit_details
+			'edit_map'
+		else
+			raise ArgumentError, "Unknown mode: #{mode}"
+		end
 	end
 end
