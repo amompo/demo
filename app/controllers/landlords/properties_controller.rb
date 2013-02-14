@@ -1,7 +1,7 @@
 module Landlords
 	class PropertiesController < ApplicationController
 		def manage
-			raise "User not logged in" unless current_user
+			validate_login!
 
 			@properties = current_user.properties :owned
 

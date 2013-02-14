@@ -14,4 +14,8 @@ class ApplicationController < ActionController::Base
   def current_user
   	session[:user]
   end
+
+  def validate_login!
+    redirect_to root_path unless current_user
+  end
 end

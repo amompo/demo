@@ -1,12 +1,14 @@
 module System
 	class DialogsController < ApplicationController
 		def index
-			raise "User not logged in" unless current_user
+			validate_login!
+
 			render layout: 'list'
 		end
 
 		def show
-			raise "User not logged in" unless current_user
+			validate_login!
+			
 			render layout: 'single_item'
 		end
 	end
