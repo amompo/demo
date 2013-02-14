@@ -1,14 +1,20 @@
 <header id="main-header-search" class="bar">
-	<div id="search-sentence">Find "anywhere" a "property" of any "size" costing "any amount" from "today" for "any period".
-	</div>
-	<div id="search-results-counter">
-		<div class="counter">
-			<span class="badge badge-warning">8</span> results
-		</div>				
-	</div>
+	<%= if property_search? %>
+		<div id="search-sentence">Find "anywhere" a "property" of any "size" costing "any amount" from "today" for "any period".
+		</div>
+	<% end %>
+	<%= if list? %>
+		<div id="search-results-counter">
+			<div class="counter">
+				<span class="badge badge-warning">8</span> results
+			</div>				
+		</div>
+	<% end %>
 	<div id="page-navigation">
-		<div class="navigation">
-			<button class="btn btn-primary btn-large">Rent your home</button>
-		</div>				
+		<%= link_to nav_button_path %>
+			<div class="navigation">
+				<button class="btn btn-primary btn-large"><%= nav_button_label %></button>
+			</div>				
+		<% end %>
 	</div>
 </header>

@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 	def new
-		session[:user] = User.logged_in!
+		session[:user] = User.tenant!
 		redirect_to root_path
 	end
 

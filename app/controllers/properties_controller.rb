@@ -1,4 +1,11 @@
 class PropertiesController < ApplicationController
+	def new
+		session[:user] = User.landlord!
+		@name = params[:id]
+		@mode = params[:mode] || 'gallery'
+		render layout: 'single_item'		
+	end
+
 	def show
 		@name = params[:id]
 		@mode = params[:mode] || 'gallery'
@@ -15,8 +22,5 @@ class PropertiesController < ApplicationController
 		@properties = Property.all
 		puts "properties: #{@properties}"
 		render layout: 'list'
-	end
-
-	def new
 	end
 end
