@@ -3,7 +3,7 @@
 		<%= link_to session_path(0), :method => :delete do %>
 		<div id="log_out">
 			<i class="icon-unlock"></i>
-			<span><%= session[:user].display if session[:user] %></span>
+			<span id="user-name"><%= session[:user].display if session[:user] %></span>
 		</div>
 		<% end %>
 	</span>

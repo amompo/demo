@@ -11,7 +11,9 @@
 			<% end %>
 		</div>
 		<div id="rent-home-button">
-			<button class="btn btn-primary btn-large">Rent your home</button>
+			<%= link_to new_property_path do %>
+				<button class="btn btn-primary btn-large">Rent your home</button>
+			<% end %>	
 		</div>
 	</div>
 </header>

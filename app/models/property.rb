@@ -4,7 +4,7 @@ class Property
 	attr_accessor :name, :cost, :currency, :city, :title, :id
 
 	def id
-		1
+		rand(10)
 	end
 
 	def self.create_random
@@ -13,6 +13,14 @@ class Property
 
 	def self.featured_ads count = 6
 		count.times.map { Property.create_random }
+	end
+
+	def self.favorites user
+		10.times.map { Property.create_random }
+	end
+
+	def self.owned_by user
+		(rand(2) +1).times.map { Property.create_random }
 	end
 
 	def self.all count = 10

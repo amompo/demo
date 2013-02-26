@@ -1,0 +1,13 @@
+<div id="content" class="mail">
+	<div class="left-content">
+		<%= render partial: 'box/normal_area/property/state/rentability', locals: {property: @property } %>
+	</div>
+	<div id="threads-container" class="right-content">
+		<ul id='threads' class="threads">
+			<%= render partial: 'landlords/messages/from_tenant' %>
+			<%= render partial: 'landlords/messages/new_from_tenant' %>
+			<%= render partial: 'landlords/messages/from_tenant' %>
+			<%= render partial: 'landlords/messages/new_from_tenant' %>
+		</ul>
+	</div>
+</div>

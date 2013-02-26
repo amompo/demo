@@ -7,6 +7,24 @@ class User
 		self.new logged_in: true
 	end
 
+	def self.guest!
+		self.new logged_in: false
+	end
+
+	def favorites
+		Property.favorites self
+	end
+
+	def properties type = :owned
+		case type
+		when :owned
+			Property.owned_by self
+		else
+			raise "ERROR: #{type} - not yet supported!"
+		end
+	end
+
+
 	def self.landlord!
 		self.new logged_in: true, type: :landlord
 	end
@@ -32,7 +50,7 @@ class User
 	end
 
 	def display
-		"#{name} is #{login_status}"
+		"Hi #{name} (#{type})"
 	end
 
 	def login_status

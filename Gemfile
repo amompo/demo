@@ -10,9 +10,9 @@ gem 'rent_messaging',     path: '/Users/kmandrup/private/repos/company/engines/r
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sprockets-rails',  github: 'rails/sprockets-rails'
-  gem 'sass-rails',       github: 'rails/sass-rails'
-  gem 'coffee-rails',     github: 'rails/coffee-rails'
+  gem 'sprockets-rails',        github: 'rails/sprockets-rails'
+  gem 'sass-rails',             github: 'rails/sass-rails'
+  gem 'coffee-rails',           github: 'rails/coffee-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', platforms: :ruby

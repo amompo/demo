@@ -1,14 +1,15 @@
 <div id="navigation-buttons" class="section">
 	<div class="items">
 		<!-- Properties  -->
+		<%= link_to properties_path do %>
 		<span id="nav-search">
 			<i class="icon-search"></i>
 			<span class="badge badge-warning">4</span>
 		</span>
-
-		<%= if logged_in? %>
+		<% end %>
+		<% if logged_in? %>
 			<!-- Favorites -->
-			<%= link_to favorites_path %>
+			<%= link_to favorites_path do %>
 				<span id="nav-favorites">
 					<i class="icon-heart"></i>
 					<span class="badge badge-warning">6</span>
@@ -16,7 +17,7 @@
 			<% end %>
 
 			<!-- Conversations -->
-			<%= link_to conversations_path %>			
+			<%= link_to conversations_nav_path do %>			
 				<span id="nav-mail">
 					<i class="icon-mail"></i>
 					<span class="badge badge-warning">3</span>

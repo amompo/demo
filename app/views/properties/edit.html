@@ -1,10 +1,10 @@
+<div id="page-id" data-id="0" style="display:none"></div>
 <div id="post_later">
 	<a href="../management/index.html"><i class="icon-arrow-left"></i>
 	Post property later</a>
-
 </div>
 
-<%= render partial: 'properties/edit/top'%>
+<%= render partial: 'properties/edit/top', locals: {mode: @mode} %>
 <%= render partial: 'properties/edit/bottom'%>
 
 </div>

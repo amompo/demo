@@ -1,13 +1,12 @@
-<div class="box rounded normal_area list_item property manage <% for_rent %> turnable selectable">
+<div class="box rounded normal_area list_item property manage for_rent turnable selectable" data-property-id="<%=property.id%>">
 	<div class="upper">
-		<span class="indicator icon-star rentability <% good %> side"></span>
 		<h5 class="status indicator hide">For rent</h5>
 		<span class="overlay icon-refresh flip"></span>
-		<img src="../../../images/photo4.png" width="240" height="180" />
+		<%= image_tag "property/#{property.name}.jpg", width: 240, height: 180 %>
 	</div>
 	<div class="middle">
 		<div class="side info">
-			<h3>Beautiful title</h3>
+			<h3><%= property.title %></h3>
 			<ul class="display">
 				<li>55 m2 apartment on 4th floor</li>
 				<li>2/1 Furnished rooms</li>
@@ -18,19 +17,19 @@
 
 		<div class="side management hide">
 			<ul class="actions">
-				<li>Set to "Rented out"</li>
-				<li>Set to "Stand by"</li>
-				<li>Set to "Edit property"</li>
-				<li>Set to "Delete property"</li>
+				<li><i class="icon-ok-sign rented"></i>Rented</li>
+				<li><i class="icon-ban-circle stand_by"></i> Stand by</li>
+				<li><i class="icon-edit editing"></i> Edit property</li>
+				<li><i class="icon-remove deleted"></i> Delete property</li>
 			</ul>
 		</div>
 	</div>
 
 	<div class="lower">
 		<div class="side info">
-			<h4 class="cost">6500 DKK</h4>
+			<h4 class="cost"><%= property.cost %>DKK</h4>
 			<ul class="actions">
-				<li class="lower icon-heart action favorite <% on %>"></li>
+				<li class="lower icon-heart action favorite on"></li>
 				<li class="lower icon-globe action map"></li>
 			</ul>
 		</div>					

@@ -1,2 +1,17 @@
-<%= render partial: 'layouts/bars/header/main/base' %>
-<%= render partial: 'layouts/bars/header/sub/base' %>
+<!-- main header -->
+<% if property_search? %>
+	<%= render partial: 'layouts/bars/header/main/search' %>
+<% elsif list? %>	
+	<%= render partial: 'layouts/bars/header/main/counter' %>
+<% else %>	
+	<%= render partial: 'layouts/bars/header/main/base' %>
+<% end %>	
+
+<!-- sub header -->
+<% if property_search? %>
+	<%= render partial: 'layouts/bars/header/sub/search' %>	
+<% elsif list? %>
+	<%= render partial: 'layouts/bars/header/sub/sort' %>
+<% elsif property_page? %>	
+	<%= render partial: 'layouts/bars/header/sub/property' %>
+<% end %>

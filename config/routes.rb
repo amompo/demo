@@ -5,7 +5,55 @@ Danrent::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: 'main#cover'
 
-  resources :properties, only: [:show, :index, :edit, :new]
+  resources :properties, only: [:show, :index, :edit, :new] do
+    member do
+      get 'edit/details', to: 'properties#edit_details'
+    end
+  end
+
+  resources :tenants, only: [] do
+    # resources :conversations, only: [:index]
+    # resources :dialogs, only: [:show]    
+  end
+
+  # resources :users do
+  # end
+
+  scope :user do
+    get 'favorites', to: 'users/properties#favorites'
+  end
+
+  scope :system do
+    # resources :dialog, only: [:index, :show]
+
+    get 'dialogs/:id',    to: 'system/dialogs#show',  as: :system_dialog
+    get 'dialogs',       to: 'system/dialogs#index', as: :system_dialogs
+  end
+
+  scope :tenant do
+    get 'conversations', to: 'tenants/conversations#index', as: :tenant_conversations
+    get 'dialogs',       to: 'tenants/dialogs#index'
+
+    get 'dialogs/:id',   to: 'tenants/dialogs#show', as: :tenant_dialog
+
+    get 'system/dialogs/:id',   to: 'system/dialogs#show',  as: :tenant_system_dialog
+    get 'system/dialogs',       to: 'system/dialogs#index', as: :tenant_system_dialogs
+
+    # resources :dialog, only: [:show]
+  end
+
+  scope :landlord do
+    get 'manage',        to: 'landlords/properties#manage'
+    get 'conversations', to: 'landlords/conversations#index', as: :landlord_conversations
+
+    # resources :dialog, only: [:index, :show]
+    get 'dialogs/:id',   to: 'landlords/dialogs#show',  as: :landlord_dialog
+    get 'dialogs',       to:  'landlords/dialogs#index', as: :landlord_dialogs
+
+    get 'system/dialogs/:id',   to: 'system/dialogs#show',  as: :landlord_system_dialog
+    get 'system/dialogs',       to: 'system/dialogs#index', as: :landlord_system_dialogs
+  end
+
 
   resources :sessions, only: [:new, :destroy]  
 

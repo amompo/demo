@@ -1,34 +1,35 @@
-<div class="box rounded normal_area list_item property favorite selectable">
-	<div class="upper">
-		<span class="rating indicator">
-			<span class="icon-heart star"></span>
-			<span class="icon-heart star"></span>
-			<span class="icon-heart star"></span>
-		</span> 
-		<span class="right indicator">
-			<span class="icon-remove"></span>
-		</span>
-		<img src="../../../images/photo4.png" width="240" height="180" />
-	</div>
+<%= link_to property_path(property.id) do %>
+	<div class="box rounded normal_area list_item property favorite selectable">
+		<div class="upper">
+			<span class="rating indicator">
+				<span class="icon-heart star"></span>
+				<span class="icon-heart star"></span>
+				<span class="icon-heart star"></span>
+			</span> 
+			<span class="right indicator">
+				<span class="icon-remove delete"></span>
+			</span>
+				<%= image_tag "property/#{property.name}.jpg", width: 240, height: 180 %>
+		</div>
 
-	<div class="middle">				
-		<h3>Beautiful title</h3>
-		<ul class="display">
-			<li>55 m2 apartment on 4th floor</li>
-			<li>2/1 Furnished rooms</li>
-			<li>Valby, Copenhagen, DK</li>
-			<li>12/5/2012 - 12/5/2013</li>
-		</ul>
-	</div>
-
-	<div class="lower">
-		<div>
-			<h4 class="cost">6500 DKK</h4>
-			<ul class="actions">
-				<li class="lower icon-star indicator rentability <% good %>"></li>
-				<li class="lower icon-mail action mail <% unread %>"></li>
-				<li class="lower icon-map action map"></li>
+		<div class="middle">				
+			<h3>Beautiful title</h3>
+			<ul class="display">
+				<li>55 m2 apartment on 4th floor</li>
+				<li>2/1 Furnished rooms</li>
+				<li>Valby, Copenhagen, DK</li>
+				<li>12/5/2012 - 12/5/2013</li>
 			</ul>
 		</div>
+
+		<div class="lower">
+			<div>
+				<h4 class="cost">6500 DKK</h4>
+				<ul class="actions">
+					<li class="lower icon-mail action mail <%= property.mail.status %>"></li>
+					<li class="lower icon-map action map"></li>
+				</ul>
+			</div>
+		</div>
 	</div>
-</div>
+<% end %>

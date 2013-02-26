@@ -1,2 +1,9 @@
-<%= render partial: 'layouts/bars/footer/main' %>
+<!-- main footer -->
+<% if logged_in? %>
+	<%= render partial: 'layouts/bars/footer/registered' %>
+<% else %>
+	<%= render partial: 'layouts/bars/footer/main' %>
+<% end %>
+
+<!-- sub footer -->
 <%= render partial: 'layouts/bars/footer/sub' %>
