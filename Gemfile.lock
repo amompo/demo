@@ -6,12 +6,6 @@ GIT
       railties (>= 3.1)
 
 GIT
-  remote: git://github.com/rails/arel.git
-  revision: 80f11e342d00a2177dd8e5684914855b87771c5b
-  specs:
-    arel (3.0.2.20120819075748)
-
-GIT
   remote: git://github.com/rails/coffee-rails.git
   revision: 052634e6d02d4800d7b021201cc8d5829775b3cd
   specs:
@@ -89,10 +83,17 @@ GIT
       execjs
       railties (>= 3.1)
 
+PATH
+  remote: /Users/kmandrup/private/repos/company/engines/rent_messaging
+  specs:
+    rent_messaging (0.0.1)
+      rails (>= 3.2.9)
+
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     activerecord-deprecated_finders (0.0.3)
+    arel (3.0.2)
     atomic (1.0.1)
     better_errors (0.5.0)
       coderay (>= 1.0.0)
@@ -170,7 +171,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  arel!
   better_errors
   binding_of_caller
   coffee-rails!
@@ -180,6 +180,7 @@ DEPENDENCIES
   meta_request
   pry
   rails!
+  rent_messaging!
   sass-rails!
   sprockets-rails!
   thin
