@@ -1,5 +1,5 @@
 <%= link_to tenant_dialog_path 0 do %>
-	<div class="box rounded normal_area list_item property mail replied selectable">
+	<div class="box rounded normal_area list_item property mail <%= conversation_class_for(conversation) %> selectable">
 		<div class="upper">
 			<%= image_tag "icons/mail/replied_mail.png", width: 34, height: 34, class: 'indicator mail' %>
 			<%= image_tag "property/photo4.png", width: 240, height: 180 %>

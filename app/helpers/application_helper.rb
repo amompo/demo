@@ -4,6 +4,15 @@ module ApplicationHelper
     session[:user]
   end
 
+  def conversation_class_for conversation
+    case conversation.total_unread_dialogs
+    when 0
+      :read
+    else
+      :unread
+    end
+  end
+
   def user_type
     current_user.type
   end

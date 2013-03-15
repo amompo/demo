@@ -7,6 +7,11 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def tenant
+    raise "Tenant logged in" unless current_user.type == 'tenant'
+    current_user
+  end
+
   def set_session
   	session[:user] ||= User.guest!
   end
