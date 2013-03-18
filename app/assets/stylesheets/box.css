@@ -1,14 +1,16 @@
 .box {
-  	display: inline-block;
-  	vertical-align: bottom;
+	display: inline-block;
+	vertical-align: bottom;
 
-  	margin: 5px;
+	margin: 5px;
 	
 	min-height: 320px;
 	max-height: 320px;
 	
 	min-width: 240px;	
 	max-width: 240px;
+
+  background-color: silver;
 
 	border: 3px solid transparent;	
 }
@@ -35,10 +37,10 @@
 }
 
 .box.small {
-  	display: inline-block;
-  	vertical-align: top;
+	display: inline-block;
+	vertical-align: top;
 
-  	margin: 10px;
+	margin: 10px;
 	
 	min-height: 210px;
 	max-height: 210px;
