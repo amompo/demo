@@ -1,6 +1,4 @@
 class User
-	include ::ActiveModel::Model
-
 	attr_accessor :name, :logged_in, :email, :password, :type
 
 	def self.logged_in!
@@ -23,7 +21,6 @@ class User
 			raise "ERROR: #{type} - not yet supported!"
 		end
 	end
-
 
 	def self.landlord!
 		self.new logged_in: true, type: :landlord

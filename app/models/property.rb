@@ -1,6 +1,4 @@
 class Property
-	include ::ActiveModel::Model
-
 	attr_accessor :name, :cost, :currency, :city, :title, :id
 
 	def id

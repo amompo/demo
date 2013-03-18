@@ -6,6 +6,9 @@ ruby '2.0.0'
 gem 'rails', '~> 4.0.0.beta1', github: 'rails/rails'
 # gem 'rent_messaging',     path: '/Users/kmandrup/private/repos/company/engines/rent_messaging' # github: 'kristianmandrup/rent_messaging'
 
+gem 'rent_property', github: 'kristianmandrup/property'
+gem 'rent_account',  github: 'kristianmandrup/rent_account'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

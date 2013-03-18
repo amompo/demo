@@ -10,6 +10,18 @@ GIT
       xpath (>= 2.0.0.beta1)
 
 GIT
+  remote: git://github.com/kristianmandrup/property.git
+  revision: 925a18fd96c0a511c8f0d7e4cb73c9223dff60ab
+  specs:
+    rent_property (0.0.1)
+
+GIT
+  remote: git://github.com/kristianmandrup/rent_account.git
+  revision: 917086bb8dd9ac73c56ae070aec905e6fdff7d86
+  specs:
+    rent_account (0.0.1)
+
+GIT
   remote: git://github.com/littlebtc/font-awesome-sass-rails.git
   revision: ef72d282529af501067963b0a2a89311de929b0e
   specs:
@@ -255,6 +267,8 @@ DEPENDENCIES
   pry
   rails (~> 4.0.0.beta1)!
   rb-fsevent (~> 0.9)
+  rent_account!
+  rent_property!
   rspec-rails
   sass-rails!
   spork
