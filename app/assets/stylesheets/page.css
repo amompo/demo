@@ -2,6 +2,24 @@
 	margin-left: auto;
 	margin-right: auto;
 	width: 1035px;
+
+	background-color: whitesmoke;
+}
+
+#content > * {
+	background: inherit;
+}
+
+#content .accordion {
+	background: inherit;	
+}
+
+#content .accordion_menu {
+	background: inherit;	
+}
+
+#content #property-bottom-right {
+	background: inherit;	
 }
 
 #content.mail {
@@ -30,8 +48,13 @@ div#property-accordion {
 	padding: 0px;
 	padding-bottom: 20px;
 
+/*	
 	min-height: 1952px;
 	max-height: 1952px;
+*/
+
+	min-height: 452px;
+	max-height: 452px;
 
 	min-width: 775px; 
 	max-width: 775px;
@@ -43,17 +66,21 @@ div#property-bottom-right {
 	margin: 0px;
 	padding: 0px;
 
-	min-height: 1952px;
-	max-height: 1952px;
+/*	
+  min-height: 1972px;
+	max-height: 1972px;
+*/
 
-	min-width: 256px; 
-	max-width: 256px;
+  min-height: 472px;
+	max-height: 472px;
+
+	min-width: 260px; 
+	max-width: 260px;
 }
 
-
 body{
-	background-color: silver;
 	margin: 0px;
+	background-color: whitesmoke;
 }
 
 .icon-mail:before         { content: "\f0e0"; }

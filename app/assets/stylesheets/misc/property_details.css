@@ -9,6 +9,15 @@
 	max-width: 775px;
 }
 
+.accordion_section input[type=text] {
+  width: 690px;  
+}
+
+.accordion_section textarea {
+  width: 690px;
+  height: 220px;  
+}
+
 #outer {
   display: table;
   width: 100%;

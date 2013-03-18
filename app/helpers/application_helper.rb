@@ -85,8 +85,8 @@ module ApplicationHelper
 	def reverse_mode mode = :gallery
 		case mode.to_sym
 		when :gallery
-			'map'
-		when :map
+			'location'
+		when :location
 			'gallery'
 		when :edit_location
 			'edit_details'

@@ -1,7 +1,10 @@
 #description-section.box.accordion_section { 
+/*  
   min-height: 390px;
   max-height: 390px;
-  
+*/
+  min-height: 400px;
+  max-height: 400px;  
 }
 
 #description-section.box.accordion_section form { 

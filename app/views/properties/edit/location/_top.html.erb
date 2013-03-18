@@ -1,10 +1,9 @@
 <div id="property-top-left">
 	<%= render partial: 'properties/edit/location/top/map' %>
-	<%= render partial: 'properties/edit/location/top/search_box'%>
+	<%= render partial: 'properties/edit/location/top/search_box' %>
 </div>
 
 <div id="property-top-right">
-  <%= reverse_mode mode %>
 	<%= render partial: 'box/square_photo/edit_profile.html'%>
   <!-- link between location and details view depending on current mode -->
 	<%= render partial: "box/link_box/#{mode}.html" %>

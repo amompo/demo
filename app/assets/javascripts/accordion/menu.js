@@ -1,5 +1,5 @@
 $(function() {
-	var section_heights = {description: 390, costs: 390, amenities: 718, period: 390};
+	var section_heights = {description: 390} //, costs: 390, amenities: 718, period: 390};
 
 	var accordion_menu_items = $('#property-accordion-menu .menu_item');
 

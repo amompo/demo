@@ -1,0 +1,7 @@
+<div id="post_later">
+  <i class="icon-arrow-left">
+	 <%= link_to "Post property later", manage_path %>
+  </i>
+</div>
+
+<%= render partial: "properties/edit/#{edit_mode}", locals: {mode: @mode} %>
