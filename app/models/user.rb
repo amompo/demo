@@ -3,8 +3,6 @@ class User
 
 	attr_accessor :name, :logged_in, :email, :password, :type
 
-	embeds_many :accounts, as: :account
-
 	def self.logged_in!
 		self.new logged_in: true
 	end

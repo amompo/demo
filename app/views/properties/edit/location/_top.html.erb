@@ -4,7 +4,8 @@
 </div>
 
 <div id="property-top-right">
+  <%= reverse_mode mode %>
 	<%= render partial: 'box/square_photo/edit_profile.html'%>
   <!-- link between location and details view depending on current mode -->
-	<%= render partial: "box/link_box/#{reverse_mode mode}.html" %>
+	<%= render partial: "box/link_box/#{mode}.html" %>
 </div>

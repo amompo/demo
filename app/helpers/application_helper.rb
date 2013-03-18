@@ -1,5 +1,18 @@
 module ApplicationHelper
 
+  def accordion_items
+    amenities
+  end
+
+  def amenities
+    # [:description, :costs, :amenities, :period]
+    [:description]
+  end  
+
+  def edit_mode
+    @mode.split('_').last
+  end
+
   def current_user
     session[:user]
   end
@@ -75,7 +88,7 @@ module ApplicationHelper
 			'map'
 		when :map
 			'gallery'
-		when :edit_map
+		when :edit_location
 			'edit_details'
 		when :edit_details
 			'edit_location'
