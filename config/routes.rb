@@ -3,7 +3,7 @@ Danrent::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root to: 'main#cover'
+  root to: 'properties#new'
 
   resources :properties, only: [:show, :index, :edit, :new] do
     member do
@@ -23,12 +23,11 @@ Danrent::Application.routes.draw do
     get 'favorites', to: 'users/properties#favorites'
   end
 
-  scope :system do
-    # resources :dialog, only: [:index, :show]
-
-    get 'dialogs/:id',    to: 'system/dialogs#show',  as: :system_dialog
-    get 'dialogs',       to: 'system/dialogs#index', as: :system_dialogs
-  end
+  # scope :system do
+  #   # resources :dialog, only: [:index, :show]
+  #   get 'dialogs/:id',    to: 'system/dialogs#show',  as: :system_dialog
+  #   get 'dialogs',        to: 'system/dialogs#index', as: :system_dialogs
+  # end
 
   scope :tenant do
     get 'conversations', to: 'tenants/conversations#index', as: :tenant_conversations

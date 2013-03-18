@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_session
+    puts "No user!:" unless defined? User
   	session[:user] ||= User.guest!
   end
 

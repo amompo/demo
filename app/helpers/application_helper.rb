@@ -78,7 +78,7 @@ module ApplicationHelper
 		when :edit_map
 			'edit_details'
 		when :edit_details
-			'edit_map'
+			'edit_location'
 		else
 			raise ArgumentError, "Unknown mode: #{mode}"
 		end

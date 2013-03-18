@@ -3,8 +3,7 @@ source 'http://rubygems.org'
 # ruby '2.0.0'
 ruby '1.9.3'
 
-gem 'rails',              github: 'rails/rails'
-
+gem 'rails', '~> 4.0.0.beta1', github: 'rails/rails'
 gem 'rent_messaging',     path: '/Users/kmandrup/private/repos/company/engines/rent_messaging' # github: 'kristianmandrup/rent_messaging'
 
 # Gems used only for assets and not required

@@ -2,7 +2,7 @@ class PropertiesController < ApplicationController
 	def new
 		session[:user] = User.landlord!
 		@name = params[:id]
-		@mode = params[:mode] || 'edit_map'
+		@mode = params[:mode] || 'edit_location'
 		
 		render layout: 'single_item'		
 	end
@@ -17,8 +17,10 @@ class PropertiesController < ApplicationController
 
 	def edit
 		@name = params[:id]
-		@mode = params[:mode] || 'edit_map'
+		@mode = params[:mode] || 'edit_location'
 		
+		@amenities = amenities if 
+
 		render layout: 'single_item'
 	end
 
@@ -34,5 +36,16 @@ class PropertiesController < ApplicationController
 		@name = params[:id]
 		
 		render layout: 'fancybox'
+	end
+
+	protected
+
+	def amenities?
+		@mode == 'edit_details'
+	end
+
+	def amenities
+		# [:description, :costs, :amenities, :period]
+		[:description]
 	end
 end
