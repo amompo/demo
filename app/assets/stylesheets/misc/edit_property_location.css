@@ -71,9 +71,6 @@ div#address-box {
 	max-width: 764px;
 
 	background-color: gray;
-/*
-	border: 1px solid;*/
-
 }
 
 form.search_form {
@@ -110,9 +107,6 @@ form.search_form {
 	max-width: 1019px;
 
 	background-color: gray;
-/*
-	border: 1px solid;*/
-
 }
 
 #edit-property-exact-address-form input {

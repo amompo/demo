@@ -37,9 +37,6 @@ div#property-accordion {
 	max-width: 775px;
 }
 
-/*	border: 1px solid;*/
-}
-
 div#property-bottom-right {
 	float: left;
 	display: inline-block;
@@ -51,8 +48,6 @@ div#property-bottom-right {
 
 	min-width: 256px; 
 	max-width: 256px;
-
-/*	border: 1px solid;*/
 }
 
 
