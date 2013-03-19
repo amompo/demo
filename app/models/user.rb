@@ -1,12 +1,18 @@
 class User
-	attr_accessor :name, :logged_in, :email, :password, :type
+	include Mongoid::Document
+  include User::Sorcerer
+	include_concerns :accounts
 
-	def self.logged_in!
-		self.new logged_in: true
+	field :name
+	field :email
+	field :password
+
+	def logged_in?
+		true
 	end
 
-	def self.guest!
-		self.new logged_in: false
+	def guest?
+		false
 	end
 
 	def favorites
@@ -22,43 +28,30 @@ class User
 		end
 	end
 
-	def self.landlord!
-		self.new logged_in: true, type: :landlord
-	end
-
-	def self.tenant!
-		self.new logged_in: true, type: :tenant
-	end
-
-	def landlord?
-		type == :landlord
-	end
-
-	def tenant?
-		type == :tenant
-	end
-
 	def type
-		@type ||= :tenant
-	end
-
-	def name
-		'Alex'
+		tenant? ? :tenant : :landlord
 	end
 
 	def display
 		"Hi #{name} (#{type})"
 	end
 
-	def login_status
-		logged_in? ? 'logged in' : 'not logged in'
-	end
+	class << self
+		# factory methods
+		def logged_in!
+			tenant!
+		end
 
-	def logged_in?
-		@logged_in
-	end
+		def guest!
+			Guest.instance
+		end
 
-	def logged_out?
-		!logged_in?
-	end
+		def landlord!
+			@landlord ||= User.create name: 'Alex', email: 'alex@danrent.dk'
+		end
+
+		def tenant!
+			@tenant ||= User.create name: 'Kris', email: 'kris@danrent.dk'
+		end
+	end	
 end

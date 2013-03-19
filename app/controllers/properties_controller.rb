@@ -1,9 +1,11 @@
 class PropertiesController < ApplicationController
 	def new
-		session[:user] = User.landlord!
+		session[:user] = :landlord
 		@name = params[:id]
 		@mode = params[:mode] || 'edit_location'
 		
+		@property = Property.new
+
 		render layout: 'single_item'		
 	end
 
@@ -18,6 +20,8 @@ class PropertiesController < ApplicationController
 	def edit
 		@name = params[:id]
 		@mode = params[:mode] || 'edit_location'
+
+		@property = Property.find @name
 		
 		render layout: 'single_item'
 	end

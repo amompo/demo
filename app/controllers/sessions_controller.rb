@@ -1,8 +1,13 @@
 class SessionsController < ApplicationController
 	def new
-		session[:user] = User.tenant!
+		session[:user] = :tenant
 		redirect_to :back
 	end
+
+  def create
+    # sorcery
+    login params[:email], params[:password]
+  end
 
 	def destroy
 		session[:user] = nil

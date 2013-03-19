@@ -4,7 +4,6 @@
 
 </div>
 
-<%= render partial: "properties/edit/#{edit_mode}", locals: {mode: @mode} %>
-
-
-
+<%= render partial: "properties/edit/#{edit_mode}", 
+           locals: {mode: @mode, property: @property } 
+%>

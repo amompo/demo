@@ -1,28 +1,16 @@
 class Property
+	include Mongoid::Document
+
+	include_concerns :all
+
 	attr_accessor :name, :cost, :currency, :city, :title, :id
 
-	def id
-		rand(10)
-	end
+	# TODO: Move to on_the_map - Address class
+	alias_method :floor_address, 	:floor_adr 
+	alias_method :floor_address=,	:floor_adr=
 
-	def self.create_random
-		Property.new name: random_name, title: 'Beatiful apartment in the...', cost: random_cost, currency: random_currency, city: 'Copenhagen'
-	end
-
-	def self.featured_ads count = 6
-		count.times.map { Property.create_random }
-	end
-
-	def self.favorites user
-		10.times.map { Property.create_random }
-	end
-
-	def self.owned_by user
-		(rand(2) +1).times.map { Property.create_random }
-	end
-
-	def self.all count = 10
-		(rand(count)+10).times.map { Property.create_random }
+	def cost
+		@cost ||= 1000 + rand(5)*1000
 	end
 
 	def mail
@@ -31,6 +19,39 @@ class Property
 
 	def favorite
 		@favorite ||= Favorite.new
+	end
+
+	class << self
+		# factory methods
+		def create_random
+			Property.create title: 'Beatiful apartment in the city', description: 'Very nice place indeed...', location: 'Copenhagen'
+		end
+
+		def featured_ads count = 6
+			count.times.map { Property.create_random }
+		end
+
+		def favorites user
+			10.times.map { Property.create_random }
+		end
+
+		def owned_by user
+			(rand(2) +1).times.map { Property.create_random }
+		end
+
+		protected
+
+		def random_currency
+			['DKK', 'SEK', 'NOK'].sample
+		end
+
+		def random_name
+			['nyhavn', 'tivoli'].sample
+		end
+
+		def random_cost
+			3000 + (rand(4) * 1000)
+		end
 	end
 
 	class Mail
@@ -43,19 +64,5 @@ class Property
 		def status
 			'on'
 		end
-	end
-
-	protected
-
-	def self.random_currency
-		['DKK', 'SEK', 'NOK'].sample
-	end
-
-	def self.random_name
-		['nyhavn', 'tivoli'].sample
-	end
-
-	def self.random_cost
-		3000 + (rand(4) * 1000)
 	end
 end

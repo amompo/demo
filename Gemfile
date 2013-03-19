@@ -4,10 +4,41 @@ ruby '2.0.0'
 # ruby '1.9.3'
 
 gem 'rails', '~> 4.0.0.beta1', github: 'rails/rails'
-# gem 'rent_messaging',     path: '/Users/kmandrup/private/repos/company/engines/rent_messaging' # github: 'kristianmandrup/rent_messaging'
 
-gem 'rent_property', github: 'kristianmandrup/property'
-gem 'rent_account',  github: 'kristianmandrup/rent_account'
+# Our gems
+gem 'property_living_space', github: 'kristianmandrup/property_living_space'
+gem 'property_location',     github: 'kristianmandrup/property_location'
+gem 'property_description',  github: 'kristianmandrup/property_description'
+
+gem 'rent_property',         github: 'kristianmandrup/property'
+gem 'rent_account',          github: 'kristianmandrup/rent_account'
+
+# Controller helpers
+gem 'context_exposer', '~> 0.3.0', github: 'kristianmandrup/context_exposer'
+
+# Mongoid DB
+gem 'mongoid',            '>= 4',     github: 'mongoid/mongoid'
+gem 'mongoid_indexing',   '~> 0.1.2'
+
+# Util
+gem 'sugar-high', '~> 0.7.3', github: 'kristianmandrup/sugar-high'
+gem 'hashie',     '~> 1.2'
+
+# Concerns
+gem 'concerned',  '~> 0.1.3'
+
+# Sessions, Login, Authentication
+gem 'sorcery',            '~> 0.8.1',     path: '/Users/kmandrup/private/repos/sorcery' # github: 'kristianmandrup/sorcery'
+
+# Duration
+# gem 'ruby-duration',      '>= 3.0',       github: 'peleteiro/ruby-duration'
+gem 'xduration',          '~> 3.0',       github: 'kristianmandrup/xduration'
+
+# Map and Location
+gem 'on_the_map'
+gem 'mongoid_geospatial', '>= 2.7.1',     github: 'nofxx/mongoid_geospatial'
+gem 'geocoder',           '>= 1.1',       github: 'alexreisner/geocoder'
+gem 'gmaps4rails',        '>= 2.0.0.pre', github: 'apneadiving/Google-Maps-for-Rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,7 +53,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'twitter-bootstrap-rails', 	github: 'seyhunak/twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', 	'>= 2.2.6',   github: 'seyhunak/twitter-bootstrap-rails'
 gem 'font-awesome-sass-rails',  '~> 3.0.2.2', github: 'littlebtc/font-awesome-sass-rails'
 
 gem 'jquery-rails'
@@ -31,11 +62,11 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.0.1'
+gem 'jbuilder',   '>= 1.0.1'
+gem 'rb-fsevent', '>= 0.9'
 
-gem 'rb-fsevent', '~> 0.9'
+gem "rspec-rails", '>= 2.5', :group => [:test, :development]
 
-gem "rspec-rails", :group => [:test, :development]
 group :test do
   gem 'factory_girl_rails', :require => false
   gem "capybara",        '>= 2.0.2',     github: 'jnicklas/capybara' 
@@ -47,7 +78,7 @@ group :test do
   gem "guard-rspec"
   gem "guard-spork"
   gem "launchy"
-  gem "database_cleaner"
+  gem "database_cleaner", '>= 0.8'
 end
 
 group :development do
@@ -58,7 +89,7 @@ group :development do
 end
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
 # gem 'unicorn'

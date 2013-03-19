@@ -1,2 +1,7 @@
-<%= render partial: 'properties/edit/location/top', locals: {mode: mode } %>
-<%= render partial: 'properties/edit/location/bottom', locals: {mode: mode } %>
+<%= render partial: 'properties/edit/location/top',    
+           locals: {mode: mode, property: property }
+%>
+
+<%= render partial: 'properties/edit/location/bottom', 
+           locals: {mode: mode, property: property }
+%>
