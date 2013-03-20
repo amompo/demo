@@ -1,7 +1,9 @@
-<%= render partial: 'properties/edit/location/top',    
-           locals: {mode: mode, property: property }
-%>
+<%= form_for property do |f| %>
+  <%= render partial: 'properties/edit/location/top',    
+             locals: {mode: mode, property: property, form: f }
+  %>
 
-<%= render partial: 'properties/edit/location/bottom', 
-           locals: {mode: mode, property: property }
-%>
+  <%= render partial: 'properties/edit/location/bottom', 
+             locals: {mode: mode, property: property, form: f }
+  %>
+<% end %>

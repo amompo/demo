@@ -8,10 +8,14 @@ class Symbol
   end
 
   def logged_in?
-    true
+    tenant? || landlord?
   end
 
   def type
     self
   end
+
+  def name
+   landlord? ? 'Alex' : 'Krist'
+  end 
 end

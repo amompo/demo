@@ -6,11 +6,25 @@ class SessionsController < ApplicationController
 
   def create
     # sorcery
-    login params[:email], params[:password]
+    login email, password #, remember_me
   end
 
 	def destroy
-		session[:user] = nil
+		session[:user] = :guest
 		redirect_to :back
 	end
+
+  protected
+
+  def email
+    params[:email]
+  end
+
+  def password
+    params[:password]
+  end
+
+  def remember_me
+    params[:remember_me]
+  end
 end

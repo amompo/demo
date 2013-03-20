@@ -3,6 +3,8 @@ class PropertiesController < ApplicationController
 		session[:user] = :landlord
 		@name = params[:id]
 		@mode = params[:mode] || 'edit_location'
+
+		@page = Page.new name: :property, mode: @mode
 		
 		@property = Property.new
 
@@ -12,7 +14,7 @@ class PropertiesController < ApplicationController
 	def show
 		@name = params[:id]
 		@mode = params[:mode] || 'gallery'
-		@page = Page.new name: :property
+		@page = Page.new name: :property, mode: @mode
 		
 		render layout: 'single_item'
 	end
@@ -20,6 +22,7 @@ class PropertiesController < ApplicationController
 	def edit
 		@name = params[:id]
 		@mode = params[:mode] || 'edit_location'
+		@page = Page.new name: :property, mode: @mode
 
 		@property = Property.find @name
 		

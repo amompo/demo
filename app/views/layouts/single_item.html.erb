@@ -17,6 +17,10 @@
     <!-- Javascripts
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+
+    <% if page.map? %>
+      <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <% end %>
     <%= javascript_include_tag "application" %>
 
   </body>

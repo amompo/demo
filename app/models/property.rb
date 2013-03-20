@@ -5,6 +5,8 @@ class Property
 
 	attr_accessor :name, :cost, :currency, :city, :title, :id
 
+	attr_accessor :search_location
+
 	# TODO: Move to on_the_map - Address class
 	alias_method :floor_address, 	:floor_adr 
 	alias_method :floor_address=,	:floor_adr=

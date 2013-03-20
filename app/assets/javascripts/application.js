@@ -14,4 +14,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+//= require jquery_ujs
+//= require jquery.ui.all
+//= require gmaps-autocomplete
 //= require_tree .

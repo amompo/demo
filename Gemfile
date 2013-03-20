@@ -14,7 +14,7 @@ gem 'rent_property',         github: 'kristianmandrup/property'
 gem 'rent_account',          github: 'kristianmandrup/rent_account'
 
 # Controller helpers
-gem 'context_exposer', '~> 0.3.0', github: 'kristianmandrup/context_exposer'
+gem 'context_exposer', '~> 0.4.0', github: 'kristianmandrup/context_exposer'
 
 # Mongoid DB
 gem 'mongoid',            '>= 4',     github: 'mongoid/mongoid'
@@ -57,6 +57,8 @@ gem 'twitter-bootstrap-rails', 	'>= 2.2.6',   github: 'seyhunak/twitter-bootstra
 gem 'font-awesome-sass-rails',  '~> 3.0.2.2', github: 'littlebtc/font-awesome-sass-rails'
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'gmaps-autocomplete-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -85,7 +87,10 @@ group :development do
 	gem 'pry'
 	gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'meta_request'	
+  gem 'meta_request'
+
+  gem 'therubyracer'
+  gem 'pivotal-github', github: 'mhartl/pivotal-github'
 end
 
 # To use ActiveModel has_secure_password
