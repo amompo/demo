@@ -14,7 +14,7 @@ gem 'rent_property',         github: 'kristianmandrup/property'
 gem 'rent_account',          github: 'kristianmandrup/rent_account'
 
 # Controller helpers
-gem 'context_exposer', '~> 0.4.0', github: 'kristianmandrup/context_exposer'
+gem 'context_exposer', '~> 0.4.1', github: 'kristianmandrup/context_exposer'
 
 # Mongoid DB
 gem 'mongoid',            '>= 4',     github: 'mongoid/mongoid'
