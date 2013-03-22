@@ -14,7 +14,11 @@ module ApplicationHelper
   end
 
   def current_user
-    session[:user]
+    :landlord
+  end
+
+  def page
+    @page ||= Page.new name 'property', type: 'property', mode: 'location'
   end
 
   def conversation_class_for conversation

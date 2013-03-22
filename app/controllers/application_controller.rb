@@ -3,24 +3,26 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_filter :set_session
+  # decorates_before_render
+  context_exposer :resource, with: :decent_exposure
+  expose_cached(:first_post) { Post.first } 
 
   protected
 
-  def tenant
-    raise "Tenant logged in" unless current_user.type == 'tenant'
-    current_user
-  end
-
-  def set_session
-  	session[:user] ||= :guest
-  end
-
   def current_user
-  	session[:user]
+    :landlord
   end
 
   def validate_login!
-    redirect_to root_path unless current_user
   end
+
+  def mode
+    params[:mode]
+  end
+
+  def id
+    params[:id]
+  end  
+
+  %i{a d s}
 end

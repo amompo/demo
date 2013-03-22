@@ -16,6 +16,6 @@ class Symbol
   end
 
   def name
-   landlord? ? 'Alex' : 'Krist'
+   landlord? ? 'Alex' : 'Kris'
   end 
 end

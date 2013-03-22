@@ -13,8 +13,19 @@ gem 'property_description',  github: 'kristianmandrup/property_description'
 gem 'rent_property',         github: 'kristianmandrup/property'
 gem 'rent_account',          github: 'kristianmandrup/rent_account'
 
+# For future
+# gem 'rent_mailer',          github: 'kristianmandrup/rent_mailer'
+# gem 'rent_danish',          github: 'kristianmandrup/rent_danish'
+
+
 # Controller helpers
 gem 'context_exposer', '~> 0.4.1', github: 'kristianmandrup/context_exposer'
+
+gem 'wicked-focused', '>= 0.2.2', require: 'wicked_focused', github: 'kristianmandrup/wicked-focused'
+gem 'controll',       '~> 0.3.1', github: 'kristianmandrup/controll'
+
+# Assets
+gem 'masonry-rails', '~> 0.2.0'
 
 # Mongoid DB
 gem 'mongoid',            '>= 4',     github: 'mongoid/mongoid'
@@ -39,6 +50,12 @@ gem 'on_the_map'
 gem 'mongoid_geospatial', '>= 2.7.1',     github: 'nofxx/mongoid_geospatial'
 gem 'geocoder',           '>= 1.1',       github: 'alexreisner/geocoder'
 gem 'gmaps4rails',        '>= 2.0.0.pre', github: 'apneadiving/Google-Maps-for-Rails'
+
+gem 'haml', :github => 'haml/haml', :branch => 'stable'
+gem 'haml-rails'
+
+gem 'draper',                       '>= 1.1.0', github: 'drapergem/draper'
+gem 'decent_exposure',              '>= 2.0.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -71,8 +88,9 @@ gem "rspec-rails", '>= 2.5', :group => [:test, :development]
 
 group :test do
   gem 'factory_girl_rails', :require => false
-  gem "capybara",        '>= 2.0.2',     github: 'jnicklas/capybara' 
-  gem "capybara-webkit", '~> 0.14.2' #,    github: 'thoughtbot/capybara-webkit'
+  # gem "capybara-webkit", '~> 0.14.2' #,    github: 'thoughtbot/capybara-webkit'
+  gem 'poltergeist'
+
   gem 'growl'  
   gem "spork"
   gem "guard"
