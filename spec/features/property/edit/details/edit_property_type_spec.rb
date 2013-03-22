@@ -15,7 +15,7 @@ feature 'Edit property type' do
 
   given(:property) { create :property, type: 'apartment'  }
 
-	scenario 'default cost' do
+	scenario 'default type' do
 		within(elem_selector) do
   		expect(page).to have_content 'apartment'
   	end

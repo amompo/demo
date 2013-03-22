@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'Edit property type' do
+feature 'Edit property size' do
   include Navigation::Helpers
 
   background do

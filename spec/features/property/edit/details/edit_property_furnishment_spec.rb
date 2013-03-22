@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'Edit property type' do
+feature 'Edit property furnishment' do
   include Navigation::Helpers
 
   background do
@@ -19,18 +19,18 @@ feature 'Edit property type' do
   	end
   end
 
-  scenario 'press property furnishment' do
+  scenario 'press property furnishment switcher' do
 	  background do
       click_link switcher
 	  end
 
-    it 'sets type to room' do
+    it 'sets furnishment to furnished' do
     	within(elem_selector) do      
       	expect(page).to have_content 'furnished'
       end
     end
 
-    it 'sets sets back to unfurnished when clicked again' do
+    it 'sets furnishment back to "unfurnished" when switcher clicked again' do
     	click_link switcher
 
     	within(elem_selector) do      
