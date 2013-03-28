@@ -1,0 +1,1 @@
+Danrent.PropertiesNewController = Ember.ObjectController.create

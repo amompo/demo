@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Property do
+feature 'Create Property with location' do
   include Navigation::Helpers
 
-  describe 'Create' do
+  scenario 'With address only' do
     it 'should create valid property with only location set' do
       expect(create :property, location: 'Copenhagen').to be_valid
     end

@@ -17,4 +17,9 @@
 //= require jquery_ujs
 //= require jquery.ui.all
 //= require gmaps-autocomplete
-//= require_tree .
+//= require handlebars
+//= require ember
+//= require ember-data
+//= require_self
+//= require danrent
+App = Ember.Application.create();

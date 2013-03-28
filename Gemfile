@@ -5,6 +5,10 @@ ruby '2.0.0'
 
 gem 'rails', '~> 4.0.0.beta1', github: 'rails/rails'
 
+# Mongoid DB
+gem 'mongoid',            '>= 4',     github: 'mongoid/mongoid'
+gem 'mongoid_indexing',   '~> 0.1.2'
+
 # Our gems
 gem 'property_living_space', github: 'kristianmandrup/property_living_space'
 gem 'property_location',     github: 'kristianmandrup/property_location'
@@ -17,19 +21,15 @@ gem 'rent_account',          github: 'kristianmandrup/rent_account'
 # gem 'rent_mailer',          github: 'kristianmandrup/rent_mailer'
 # gem 'rent_danish',          github: 'kristianmandrup/rent_danish'
 
-
 # Controller helpers
-gem 'context_exposer', '~> 0.4.1', github: 'kristianmandrup/context_exposer'
-
-gem 'wicked-focused', '>= 0.2.2', require: 'wicked_focused', github: 'kristianmandrup/wicked-focused'
-gem 'controll',       '~> 0.3.1', github: 'kristianmandrup/controll'
+gem 'context_exposer', 		'~> 0.4.1', github: 'kristianmandrup/context_exposer'
+gem 'imperator-ext', 			'~> 0.2.4', github: 'kristianmandrup/imperator-ext'
+gem 'focused_controller', '~> 0.1.0', github: 'kristianmandrup/focused_controller'
+# gem 'wicked-focused', 		'>= 0.2.2', github: 'kristianmandrup/wicked-focused'
+gem 'controll',       		'~> 0.3.2', github: 'kristianmandrup/controll'
 
 # Assets
 gem 'masonry-rails', '~> 0.2.0'
-
-# Mongoid DB
-gem 'mongoid',            '>= 4',     github: 'mongoid/mongoid'
-gem 'mongoid_indexing',   '~> 0.1.2'
 
 # Util
 gem 'sugar-high', '~> 0.7.3', github: 'kristianmandrup/sugar-high'
@@ -56,6 +56,14 @@ gem 'haml-rails'
 
 gem 'draper',                       '>= 1.1.0', github: 'drapergem/draper'
 gem 'decent_exposure',              '>= 2.0.0'
+
+gem 'ember-rails'
+gem 'emblem-rails'
+
+gem 'ember-bootstrap-rails',    github: 'kristianmandrup/ember-bootstrap-rails'
+
+gem 'ember-auth-rails',         github: 'kristianmandrup/ember-auth-rails'      
+gem 'ember-oauth2-rails',       github: 'kristianmandrup/ember-oauth2-rails'      
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -107,7 +115,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'meta_request'
 
-  gem 'therubyracer'
+  # gem 'therubyracer'
   gem 'pivotal-github', github: 'mhartl/pivotal-github'
 end
 

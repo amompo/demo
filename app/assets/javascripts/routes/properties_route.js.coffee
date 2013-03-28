@@ -1,0 +1,4 @@
+Danrent.PropertiesRoute = Ember.Route.extend
+  setupController: (controller) ->
+    // Set the IndexController's `title`
+    controller.set 'title', 'My App'
