@@ -51,11 +51,22 @@ gem 'mongoid_geospatial', '>= 2.7.1',     github: 'nofxx/mongoid_geospatial'
 gem 'geocoder',           '>= 1.1',       github: 'alexreisner/geocoder'
 gem 'gmaps4rails',        '>= 2.0.0.pre', github: 'apneadiving/Google-Maps-for-Rails'
 
+# Templates
 gem 'haml', :github => 'haml/haml', :branch => 'stable'
 gem 'haml-rails'
 
+gem 'curly-templates'
+
+# Form
+
+gem 'simple_form', '~> 3.0.0.beta1', github: 'plataformatec/simple_form'
+
+# Decorators
+
 gem 'draper',                       '>= 1.1.0', github: 'drapergem/draper'
 gem 'decent_exposure',              '>= 2.0.0'
+
+# Ember
 
 gem 'ember-rails'
 gem 'emblem-rails'

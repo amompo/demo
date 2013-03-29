@@ -1,0 +1,5 @@
+= simple_form_for property do |f|
+  - %w{top bottom}.each do |part|
+    = render "properties/edit/location/#{part}", mode: mode, property: property, form: f
+
+    

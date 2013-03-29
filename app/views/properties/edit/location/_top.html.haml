@@ -1,0 +1,7 @@
+#property-top-left
+  - %w{map search_box}.each do |part|
+    = render "properties/edit/location/top/#{part}", property: property, form: form
+#property-top-right
+  = render 'box/square_photo/edit_profile.html', property: property
+  = render "box/link_box/#{mode}.html", property: property
+  

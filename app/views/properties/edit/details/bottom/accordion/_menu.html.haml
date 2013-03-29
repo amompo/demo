@@ -1,0 +1,8 @@
+#property-bottom-right
+  %ul#property-accordion-menu.box.accordion_menu
+    - amenities.each do |amenity|
+      %li.menu_item.active
+        %h3
+          %i.icon-circle.indicator
+          = amenity
+

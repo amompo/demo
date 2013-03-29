@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    = render 'layouts/application/head'
+  %body
+    = render partial: 'layouts/bars/header'
+
+    #content.single_item
+      = yield
+
+    = render 'layouts/bars/footer'
+
+    - if map?
+      %script{type: "text/javascript", src: "http://maps.googleapis.com/maps/api/js?sensor=false"}
+
+    = javascript_include_tag "application"

@@ -1,0 +1,11 @@
+#property-details.squares.edit
+	.outer.cost
+	  .inner.cost
+	  	= form.input :cost
+
+	= spinner_for :type, icon: 'home', property: property
+	= spinner_for :size, icon: 'check-empty', property: property
+	= spinner_for :rooms, icon: 'th-large', property: property
+	= spinner_for :bathrooms, icon: 'th', property: property
+
+	/ = switcher_for :furnishment, icon: 'lightbulb', property: property

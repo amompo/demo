@@ -17,10 +17,6 @@ module ApplicationHelper
     :landlord
   end
 
-  def page
-    @page ||= Page.new name 'property', type: 'property', mode: 'location'
-  end
-
   def conversation_class_for conversation
     case conversation.total_unread_dialogs
     when 0
@@ -70,16 +66,24 @@ module ApplicationHelper
     current_user.tenant?
   end
 
+  def map?
+    false
+    # page.map?
+  end
+
   def property_management?
-    @page && @page.name == :property_management
+    false    
+    # page.name == :property_management
   end
 
   def property_search?
-    @page && @page.name == :property_search
+    false
+    # page.name == :property_search
   end
 
   def property_page?
-    @page && @page.name == :property
+    true
+    # page.name == :property
   end
 
 	def user_session

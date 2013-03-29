@@ -1,0 +1,8 @@
+#property-top-left
+  - %w{gallery}.each do |part|
+    = render "properties/edit/details/top/#{part}"
+
+#property-top-right
+  = render 'box/square_photo/edit_profile.html'
+  = render "box/link_box/#{mode}.html"
+

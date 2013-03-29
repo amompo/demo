@@ -44,10 +44,13 @@ class PropertiesController < ApplicationController
 	end
 
 	def edit
-		@name = params[:id]
-		@mode = params[:mode] || 'edit_location'
+		id = params[:id] || Property.last.id
 
-		@property = Property.find @name
+		@mode = params[:mode] || 'edit_details'
+
+		@property = Property.find id
+  rescue
+    @property = Property.last
 		
 		render layout: 'single_item'
 	end

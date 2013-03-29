@@ -22,4 +22,5 @@
 //= require ember-data
 //= require_self
 //= require danrent
-App = Ember.Application.create();
+
+// App = Ember.Application.create();
